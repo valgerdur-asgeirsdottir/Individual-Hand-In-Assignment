@@ -2,5 +2,6 @@
   "project.py/kata_test.py::test_empty_string",
   "project.py/kata_test.py::test_single_number",
   "project.py/kata_test.py::test_two_numbers",
-  "project.py/kata_test.py::test_unknown_number_of_numbers"
+  "project.py/kata_test.py::test_unknown_number_of_numbers",
+  "project.py/kata_test.py::test_new_line_between_numbers"
 ]

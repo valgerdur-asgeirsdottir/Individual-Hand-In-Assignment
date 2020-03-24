@@ -21,3 +21,9 @@ def test_unknown_number_of_numbers():
     assert Add("4,5,10") == 19
     assert Add("20,51") == 71
     assert Add("9,10,13") == 32
+
+def test_new_line_between_numbers():
+    assert Add("3\n4,5,6") == 18
+    assert Add("4\n5,10\n") == 19
+    assert Add("20\n") == 20
+    assert Add("9\n10\n13") == 32
