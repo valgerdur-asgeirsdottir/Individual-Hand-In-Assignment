@@ -1,4 +1,5 @@
 [
   "project.py/kata_test.py::test_empty_string",
-  "project.py/kata_test.py::test_single_number"
+  "project.py/kata_test.py::test_single_number",
+  "project.py/kata_test.py::test_two_numbers"
 ]
