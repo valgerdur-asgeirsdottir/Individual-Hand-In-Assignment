@@ -27,3 +27,9 @@ def test_new_line_between_numbers():
     assert Add("4\n5,10\n") == 19
     assert Add("20\n") == 20
     assert Add("9\n10\n13") == 32
+
+def test_numbers_bigger_than_1000():
+    assert Add("3,4002,999,6") == 1008
+    assert Add("4,1001,1000") == 1004
+    assert Add("20\n9000") == 20
+    assert Add("9000,2000,1300") == 0
