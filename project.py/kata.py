@@ -6,4 +6,5 @@ def Add(numbers):
             return the_sum
     if numbers.isdigit():
         return int(numbers)
-    return 0
+    elif numbers == "":
+        return 0
