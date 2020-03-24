@@ -15,3 +15,9 @@ def test_two_numbers():
     assert Add("4,5") == 9
     assert Add("2,5") == 7
     assert Add("6,0") == 6
+
+def test_unknown_number_of_numbers():
+    assert Add("3,4,5,6") == 18
+    assert Add("4,5,10") == 19
+    assert Add("20,51") == 71
+    assert Add("9,10,13") == 32
