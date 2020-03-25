@@ -50,3 +50,8 @@ def test_negatives_are_not_allowed():
         Add("-100\n-2,9999,-10")
 
     assert "Negatives not allowed: -100 -2 -10 " == str(excinfo.value)
+
+def test_different_delimiter():
+    assert Add("//X\n1X2") == 3
+    assert Add("//%\n1%2%3") == 6
+    assert Add("//[delimiter]\n") == 0

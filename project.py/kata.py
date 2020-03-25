@@ -2,10 +2,18 @@ class NegativeNumbersException(Exception):
     pass
 
 def Add(numbers):
-    if "," in numbers or "\n" in numbers:
-        num_list = numbers.replace("\n", " ").replace(",", " ").split()
-        the_sum = 0
+    if numbers[:2] == "//" or "\n" in numbers or "," in numbers:
+        if numbers[:2] == "//":
+            numbers = numbers[2:]
+            a_list = numbers.split("\n")
+            delimiter = a_list[0]
+            numbers = numbers[len(delimiter)+1:]
+            num_list = numbers.replace(delimiter, " ").replace(",", " ").replace("\n", " ").split()
+        else:
+            num_list = numbers.replace(",", " ").replace("\n", " ").split()
+    
         negatives_str = ""
+        the_sum = 0
         for num in num_list:
             if int(num) < 0:
                 negatives_str += str(num) + " "
